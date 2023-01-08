@@ -181,11 +181,58 @@ return 0;
 ### 8. Write a program in C to copy one string to another string
 
 ```c
+#include<stdio.h>
+
+int main(){
+char string1[50];
+char string2[sizeof string1];
+printf("Enter the string to be copied: ");
+fgets(string1,sizeof string1,stdin);
+int i=0;
+while(string1[i]!='\0'){
+    string2[i]=string1[i];
+    i++;
+}
+printf("The text copied: %s\n",string2);
+printf("String copied %d",i-1);
+}
 
 ```
 ### 9. Write a program in C to count total number of vowel or consonant in a string
 
 ```c
+#include <stdio.h>
+
+
+void main()
+{
+    char str[100];
+    int i, len, vowel, cons;
+
+       printf("\n\nCount total number of vowel or consonant :\n");
+       printf("----------------------------------------------\n");
+       printf("Input the string : ");
+       fgets(str, sizeof str, stdin);
+
+    vowel = 0;
+    cons = 0;
+    len = strlen(str);
+
+    for(i=0; i<len; i++)
+    {
+
+        if(str[i] =='a' || str[i]=='e' || str[i]=='i' || str[i]=='o' || str[i]=='u' || str[i]=='A' || str[i]=='E' || str[i]=='I' || str[i]=='O' || str[i]=='U')
+        {
+            vowel++;
+        }
+        else if((str[i]>='a' && str[i]<='z') || (str[i]>='A' && str[i]<='Z'))
+        {
+            cons++;
+        }
+    }
+    printf("\nThe total number of vowel in the string is : %d\n", vowel);
+    printf("The total number of consonant in the string is : %d\n\n", cons);
+}
 
 ```
 ### 10. Write a program in C to find maximum occurring character in a string
