@@ -87,11 +87,59 @@ for(i=size;i>=0;i--){
 ### 5. Write a program in C to count the total number of words in a string
 
 ```c
+#include<stdio.h>
+int main(){
+char name[50];
+int i=0,word=1;
+
+printf("Enter the sentence: ");
+gets(name);
+
+while(name[i]!='\n'){
+    if(name[i]==' '){
+        word++;
+    }
+    i++;
+}
+printf("Number of word is %d",word);
+}
+
 
 ```
 ### 6. Write a program in C to compare two strings without using string library functions
 
 ```c
+#include<stdio.h>
+
+int compare(char str1[], char str2[])
+{
+int flag=1, i=0;
+while(str1[i]!='\0' && str2[i]!='\0'){
+    if(str1[i]!=str2[i]){
+        flag=0;
+        break;
+    }
+    i++;
+}
+return flag;
+}
+
+int main(){
+char str1[50],str2[50];
+printf("Enter The first string: ");
+fgets(str1,sizeof(str1),stdin);
+printf("Enter The second string: ");
+fgets(str2,sizeof(str2),stdin);
+int check=compare(str1,str2);
+
+if(check==1){
+    printf("The above strings are same ");
+}
+else
+    printf("The above strings are not same ");
+
+return 0;
+}
 
 ```
 ### 7. Write a program in C to count total number of alphabets, digits and special characters in a string
