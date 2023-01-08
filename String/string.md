@@ -19,18 +19,68 @@ return 0;
 ### 2. Write a program in C to find the length of a string without using library function
 
 ```c
+#include <stdio.h>
+void main(){
+    char str[50];
+    int i=0,j=0,size=0;
+    printf("Enter your string: ");
+    gets(str);
+
+    while(str[i]!='\0'){
+        size++;
+        i++;
+    }
+printf("The size of the string is :%d \n",i);
+
+return 0;
+}
+
 
 ```
 
 ### 3. Write a program in C to separate the individual characters from a string
 
 ```c
+#include <stdio.h>
+void main(){
+    char str[50];
+    int i=0,j=0,size=0;
+    printf("Enter your string: ");
+    gets(str);
+
+printf("The characters of the string are : \n");
+
+        while(str[j] != '\0'){
+            printf("%c ",str[j]);
+            j++;
+        }
+
+return 0;
+}
 
 ```
 
 ### 4. Write a program in C to print individual characters of string in reverse order
 
 ```c
+#include<stdio.h>
+int main(){
+int i=0,size=0;
+char name[50];
+
+printf("Enter the string:");
+gets(name);
+
+while(name[i]!='\0'){
+    size++;
+    i++;
+}
+printf("Reverse string is: ");
+for(i=size;i>=0;i--){
+    printf(" %c",name[i]);
+}
+
+}
 
 ```
 
