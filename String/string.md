@@ -191,6 +191,44 @@ return 0;
 ### 10. Write a program in C to find maximum occurring character in a string
 
 ```c
+#include<stdio.h>
+#include<string.h>
+
+int main(){
+
+char str[100];
+printf("Enter the string: ");
+fgets(str,sizeof str,stdin);
+int size=strlen(str);
+
+//int max_occur=1;
+int freq[size];
+char max_char=str[0],min_char=str[0];
+
+for(int i=0;i<size;i++){
+    freq[i]=1;
+    for(int j=i+1;j<size;j++){
+        if(str[i]==str[j] && str[i] != '0' && str[i] !=' '){
+            freq[i]++;
+            str[j]='0';
+        }
+    }
+}
+
+ int max=freq[0],min=freq[0];
+ for(int i=0;i<size;i++){
+
+    if(max<freq[i]){
+        max=freq[i];
+        max_char=str[i];
+    }
+ }
+
+ printf("The maximum occured characters is: %c of %d times",max_char,max);
+
+
+return 0;
+}
 
 ```
 ### 11. Write a C program to sort a string array in ascending order
