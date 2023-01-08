@@ -145,6 +145,37 @@ return 0;
 ### 7. Write a program in C to count total number of alphabets, digits and special characters in a string
 
 ```c
+#include<stdio.h>
+int main(){
+
+char ch[50];
+int alpha=0,num=0,special=0,i=0;
+
+    /* Input character from user */
+    printf("Enter any string or character: ");
+    fgets(ch,sizeof ch,stdin);
+
+while(ch[i]!='\0'){
+    /* Alphabet check */
+    if((ch[i] >= 'a' && ch[i] <= 'z') || (ch[i] >= 'A' && ch[i] <= 'Z'))
+    {
+       alpha++;
+    }
+    else if(ch[i] >= '0' && ch[i] <= '9')
+    {
+        num++;
+    }
+    else{
+            if(ch[i]!='\0')
+                special++;
+    }
+    i++;
+}
+printf("Number of Alphabets : %d\n",alpha);
+printf("Number of Numbers : %d\n",num);
+printf("Number of Special Characters : %d\n",special-1);
+return 0;
+}
 
 ```
 ### 8. Write a program in C to copy one string to another string
