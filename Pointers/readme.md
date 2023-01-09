@@ -19,5 +19,24 @@ for(int i=0;i<strlen(string1);i++){
 }
 }
 
+```
+
+### 2.Write a program in C to add two numbers using pointers
+
+```c
+#include<stdio.h>
+int main(){
+int *a1,*a2,sum;
+int b1,b2;
+printf("Enter first number:");
+scanf("%d",&b1);
+printf("Enter second number:");
+scanf("%d",&b2);
+a1=&b1;
+a2=&b2;
+sum=*a1+*a2;
+printf("The sum is: %d",sum);
+return 0;
+}
 
 ```
