@@ -40,3 +40,24 @@ return 0;
 }
 
 ```
+
+### 3.Write a program in C to add numbers using call by reference
+
+```c
+#include<stdio.h>
+int sum(int *a,int *b){
+int sum=*a+*b;
+return sum;
+}
+int main(){
+int a1,a2;
+printf("Enter first integer number:");
+scanf("%d",&a1);
+printf("Enter second integer number:");
+scanf("%d",&a2);
+
+printf("The sum of %d and %d is %d",a1,a2,sum(&a1,&a2));
+
+}
+
+```
