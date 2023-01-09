@@ -61,3 +61,28 @@ printf("The sum of %d and %d is %d",a1,a2,sum(&a1,&a2));
 }
 
 ```
+
+### 4.Write a program in C to find the maximum number between two numbers using a pointer
+```c
+#include<stdio.h>
+
+int main()
+{
+    int a1,a2;
+    printf("Enter first number: ");
+    scanf("%d",&a1);
+    printf("Enter second number: ");
+    scanf("%d",&a2);
+    compare(&a1,&a2);
+  getch();
+}
+
+void compare(int *a,int *b){
+    if(*a>*b){
+        printf("%d is greter than %d",*a,*b);
+    }
+    else
+        printf("%d is greter than %d",*b,*a);
+}
+
+```
