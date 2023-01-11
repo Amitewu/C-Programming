@@ -1,5 +1,5 @@
 ## **C Programming Practice**
-## _String Related Problem_
+## Pointer Related Problem_
 
 
 ### 1. Write a program in C using pointers to print all the array element 
@@ -107,3 +107,4 @@ return 0;
 }
 
 ```
+
